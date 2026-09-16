@@ -164,7 +164,7 @@ The single most useful habit: diagnose whether a bad result is a **prompt proble
   - Diagnoses prompt-vs-slider issues on regeneration
   - Uses this guide as reference
 
-- **`/bitwize-music:lyric-reviewer`** — Pre-generation QC gate
+- A pre-generation QC pass on the lyrics (catch awkward phrasing and pronunciation risks before spending credits)
   - Confirms the prompt is ready before slider tuning matters
 
 ## See Also

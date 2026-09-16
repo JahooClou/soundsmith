@@ -227,7 +227,7 @@ V5 improved tag reliability significantly over V4/V4.5. Tags that were inconsist
 
 ## Related Skills
 
-- **`/bitwize-music:lyric-writer`** - Lyric writing with automatic section tagging
+- Lyric writing with section tagging built in
   - Automatically adds section tags to lyrics
   - Uses tags from this reference guide
   - Ensures proper song structure
@@ -237,7 +237,7 @@ V5 improved tag reliability significantly over V4/V4.5. Tags that were inconsist
   - Optimizes tag placement for generation results
   - Uses this guide as reference for tag selection
 
-- **`/bitwize-music:lyric-reviewer`** - Pre-generation QC
+- **a separate lyric skill** - Pre-generation QC
   - Verifies section tags are present and correct
   - Checks for proper song structure
   - Ensures tags follow Suno best practices

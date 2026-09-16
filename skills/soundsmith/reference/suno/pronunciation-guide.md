@@ -2,7 +2,7 @@
 
 Suno's text-to-speech engine can mispronounce words, especially homographs (same spelling, different pronunciation) and technical terms. This guide helps identify problem words and provides solutions.
 
-> **Related skill**: `/bitwize-music:pronunciation-specialist` (automated scanning for pronunciation risks)
+> **Related pass**: scan lyrics for pronunciation risks before generating — homographs, acronyms, foreign names.
 > **Related docs**: [v5-best-practices.md](v5-best-practices.md)
 
 ## Why This Matters
@@ -432,16 +432,16 @@ When in doubt:
 
 ## Related Skills
 
-- **`/bitwize-music:pronunciation-specialist`** - Automated pronunciation scanning for lyrics
+- Pronunciation scanning for lyrics before generation
   - Scans for homographs, proper nouns, acronyms, tech terms
   - Uses this guide as reference
   - Suggests phonetic fixes automatically
 
-- **`/bitwize-music:lyric-writer`** - Lyric writing with automatic pronunciation checks
+- Lyric writing with pronunciation checks built in
   - Includes automatic pronunciation scanning after every draft
   - Applies rules from this guide during review process
 
-- **`/bitwize-music:lyric-reviewer`** - Pre-generation QC gate
+- A pre-generation QC pass on the lyrics
   - 13-point checklist includes pronunciation verification
   - Verifies homograph decisions and phonetic spelling application before Suno generation
 
