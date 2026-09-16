@@ -1,0 +1,18 @@
+{
+  "name": "soundsmith",
+  "description": "Soundsmith - Suno v6 prompt engineering for Claude Code",
+  "owner": {
+    "name": "JahooClou"
+  },
+  "plugins": [
+    {
+      "name": "soundsmith",
+      "description": "Suno v6 prompt engineering: style boxes, exclude fields, structure tags, model choice, and instrumental scores cut to picture.",
+      "version": "1.0.0",
+      "source": "./",
+      "author": {
+        "name": "JahooClou"
+      }
+    }
+  ]
+}
