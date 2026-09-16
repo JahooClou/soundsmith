@@ -31,7 +31,7 @@ Reference guides for Suno AI music generation.
 | Finding the right genre/subgenre tag | [Genre List](genre-list.md) |
 | Debugging a failed generation | [Tips & Tricks](tips-and-tricks.md) |
 
-> **Related skill**: `/bitwize-music:suno-engineer` provides interactive guidance using these references.
+> **Related skill**: `/soundsmith` provides interactive guidance using these references.
 
 ## Suno Tag/Metatag Terminology
 

@@ -232,7 +232,7 @@ V5 improved tag reliability significantly over V4/V4.5. Tags that were inconsist
   - Uses tags from this reference guide
   - Ensures proper song structure
 
-- **`/bitwize-music:suno-engineer`** - Technical Suno V5 prompting
+- **`/soundsmith`** - Technical Suno V5 prompting
   - Applies section tags correctly in lyrics boxes
   - Optimizes tag placement for generation results
   - Uses this guide as reference for tag selection

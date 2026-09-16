@@ -2,7 +2,7 @@
 
 Comprehensive guide for getting the best results with Suno V5 and V5.5.
 
-> **Related skills**: `/bitwize-music:suno-engineer` (interactive prompting), `/bitwize-music:pronunciation-specialist` (phonetic review)
+> **Related skills**: `/soundsmith` (interactive prompting), `/bitwize-music:pronunciation-specialist` (phonetic review)
 > **Related docs**: [pronunciation-guide.md](pronunciation-guide.md), [structure-tags.md](structure-tags.md), [voice-tags.md](voice-tags.md), [tips-and-tricks.md](tips-and-tricks.md)
 
 ---
@@ -676,7 +676,7 @@ crisp, warm, bright, deep, spacious
 
 ## Related Skills
 
-- **`/bitwize-music:suno-engineer`** - Technical Suno V5 prompting expert
+- **`/soundsmith`** - Technical Suno V5 prompting expert
   - Uses this guide as reference
   - Constructs style prompts and genre tags
   - Optimizes prompts for best generation results

@@ -14,7 +14,7 @@
 
 Deep-dive guide to Suno V5's three Creative Sliders — **Weirdness**, **Style Influence**, and **Audio Influence** — including per-slider behavior, genre starting points, interaction effects, and when to reach for a slider vs. rewrite the style prompt.
 
-> **Related skills**: `/bitwize-music:suno-engineer` (constructs prompts and picks slider settings)
+> **Related skills**: `/soundsmith` (constructs prompts and picks slider settings)
 > **Related docs**: [v5-best-practices.md](v5-best-practices.md#creative-sliders) (this file expands the brief Creative Sliders table there), [tips-and-tricks.md](tips-and-tricks.md), [genre-list.md](genre-list.md)
 
 ---
@@ -159,7 +159,7 @@ The single most useful habit: diagnose whether a bad result is a **prompt proble
 
 ## Related Skills
 
-- **`/bitwize-music:suno-engineer`** — Technical Suno V5 prompting expert
+- **`/soundsmith`** — Technical Suno V5 prompting expert
   - Chooses slider settings alongside the style prompt
   - Diagnoses prompt-vs-slider issues on regeneration
   - Uses this guide as reference

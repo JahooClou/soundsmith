@@ -1,5 +1,5 @@
 ---
-name: suno-engineer
+name: soundsmith
 description: Builds Suno v6 prompts — Styles box, Exclude field, structure tags, model choice (v6 / v6-wild / v6-mini) and generation settings — and fills in a track file's Suno Inputs for album work. Also covers instrumental scores cut to picture (tempo-locked music for video edits). Use when creating, fixing, or iterating any Suno prompt or generation plan.
 argument-hint: <track-file-path | "prompt for [concept]" | "score for [edit]">
 allowed-tools:

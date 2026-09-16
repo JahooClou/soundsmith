@@ -22,9 +22,9 @@ So the skill will tell you that v6 generates up to 8 minutes per pass and costs 
 Then invoke it:
 
 ```
-/soundsmith:suno-engineer prompt for a dark synthwave title sequence
-/soundsmith:suno-engineer score for my 90-second product film at 24 fps
-/soundsmith:suno-engineer path/to/track-file.md
+/soundsmith prompt for a dark synthwave title sequence
+/soundsmith score for my 90-second product film at 24 fps
+/soundsmith path/to/track-file.md
 ```
 
 ## What it covers
@@ -46,7 +46,7 @@ Then invoke it:
 ## Contents
 
 ```
-skills/suno-engineer/
+skills/soundsmith/
   SKILL.md                      the skill itself
   genre-practices.md            per-genre prompting strategies
   reference/suno/
