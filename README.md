@@ -33,7 +33,7 @@ Then invoke it:
 - **The four inputs** — Styles box order and descriptor discipline, the Exclude field (negatives belong there, not phrased as "no X" in the positive box), the lyrics box, and the controls. Including **Variety**, new in v6, which rewrites your style text unless you set it to 0.
 - **Structure tags with performance cues** on every section, and the parameter-looking tags that are not real commands.
 - **Instrumentals** that stay instrumental.
-- **Scoring to picture** — a frames-per-beat table for 24/25/30 fps, Suno's documented tempo-drift fix, building length in whole bars, and why you lock the music rather than bending the edit.
+- **Scoring to picture** — a frames-per-beat table for 24/25/30 fps from frantic to cinematic, turning an edit's brief into section tags, Suno's documented tempo-drift fix, measuring the track after generation, building length in whole bars, and why you lock the music rather than bending the edit. Pairs with [reelsmith](https://github.com/JahooClou/reelsmith) for the edit itself.
 - **Iterating by editing, not rerolling** — v6's section edits, single-lyric edits, Extend, Cover, mashups and sampling.
 - **Track file and album workflow** — optional, for people who keep tracks as files: a Suno Inputs template and a generation log.
 

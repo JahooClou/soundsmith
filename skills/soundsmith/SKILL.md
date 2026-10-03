@@ -120,13 +120,19 @@ When the music has to fit an edit, tempo is the whole game. Suno acknowledges th
 
 **Pick a tempo whose beat is a whole number of frames**, so cuts land on beats:
 
-| Frames per beat | 24 fps | 25 fps | 30 fps |
-|---|---|---|---|
-| 10 | 144 BPM | 150 BPM | 180 BPM |
-| 12 | 120 BPM | 125 BPM | 150 BPM |
-| 15 | 96 BPM | 100 BPM | 120 BPM |
-| 16 | 90 BPM | 93.75 BPM | 112.5 BPM |
-| 20 | 72 BPM | 75 BPM | 90 BPM |
+| Frames per beat | 24 fps | 25 fps | 30 fps | Pace |
+|---|---|---|---|---|
+| 8 | 180 BPM | 187.5 BPM | 225 BPM | frantic |
+| 9 | 160 BPM | 166.67 BPM | 200 BPM | frantic |
+| 10 | 144 BPM | 150 BPM | 180 BPM | energetic |
+| 11 | 130.91 BPM | 136.36 BPM | 163.64 BPM | energetic |
+| 12 | 120 BPM | 125 BPM | 150 BPM | driving |
+| 13 | 110.77 BPM | 115.38 BPM | 138.46 BPM | driving |
+| 15 | 96 BPM | 100 BPM | 120 BPM | calm |
+| 16 | 90 BPM | 93.75 BPM | 112.5 BPM | calm |
+| 20 | 72 BPM | 75 BPM | 90 BPM | slow, cinematic |
+
+Frames per beat = 60 × fps / BPM. Suno takes whole or simple decimal BPMs in Styles; round to one decimal and let the tempo lock (step 3) make it exact.
 
 Workflow:
 1. Put the exact BPM and key in the Styles box, and add "no tempo changes".
@@ -136,7 +142,30 @@ Workflow:
 5. Build the length you need in whole bars. Generate long and cut on bar lines, or Extend if short.
 6. Exclude `fade-out` when you need a hard ending on a specific frame.
 7. Structure the arrangement to the picture: section tags in the lyrics box, one per act of the edit, with cues like `[Break - drums drop out, riser]`.
-8. Duck the music 8–10 dB under dialogue. Deliver −14 LUFS integrated, −1 dBTP for online.
+8. Duck the music 8–10 dB under dialogue. Around −14 LUFS integrated with peaks under −1 dBTP is common practice for online delivery; no major platform publishes it as a target for ordinary uploads, so call it a starting point, not a requirement.
+
+### A brief from an edit
+
+When the request comes from a video edit (the **reelsmith** skill hands one over), it carries five things. Turn each into Suno inputs:
+
+| Brief | Becomes |
+|---|---|
+| Tempo, frame-exact (table above) | Styles: the BPM and key, plus "steady tempo, no tempo changes" |
+| Running time | generate about two bars longer than needed; cut on bar lines afterwards |
+| Section plan in bars, one per act of the edit (intro, build, drop, break, final chorus, outro) | lyrics box: one section tag per act, in order, with a cue: `[Intro - sparse, pulse only]`, `[Build - add drums, rising]`, `[Drop - full band]`, `[Break - drums out, riser]` |
+| Character (genre, instruments, vocal or not) | Styles, as in §1 |
+| A real ending on a downbeat | Styles "hard stop ending"; Exclude `fade-out` |
+
+Bar counts written into section tags are **Lore**: Suno does not document that it obeys them, so a section can come back longer or shorter than asked. Plan for that: measure, then cut.
+
+### After generation: measure, then cut
+
+Generated tempo drifts even when you ask it not to. One 3.5-minute v6 track asked for a steady tempo measured 127.8 BPM at the start and 131.2 at the end. A fixed grid from one tempo is frames off by the last chorus.
+
+- Map what came back. With reelsmith installed: `python beats.py track.wav --fps 25 --out beats.json` reports start and end tempo and flags drift, and lists downbeats, bars and section boundaries.
+- If it drifts: lock it (Manual BPM in Studio, or time-stretch), or keep it and cut the picture to the *tracked* beats rather than a grid.
+- If it is too long: cut whole sections, downbeat to downbeat, with a short cross-fade on the splice. The usual move is from the end of the build into the last chorus, which keeps the intro and the real ending. `music_cut.py --suggest MIN MAX` ranks the candidate splices.
+- Hand the final file and its beat map back to the edit. There, picture cuts land one frame *before* each beat: audio follows video.
 
 Stems (Pro/Premier) let you duck only the melodic layer and keep the pulse running.
 
@@ -318,7 +347,7 @@ After generating:
 - [ ] Vocals clear and correctly pronounced; not buried
 - [ ] No unwanted instruments — exclusions actually worked
 - [ ] No awkward cut at the end
-- [ ] For picture: tempo measured and locked, first downbeat on frame 0
+- [ ] For picture: tempo frame-exact in Styles, section tags match the edit's acts, tempo measured after generation (locked, or tracked beats handed back), first downbeat on frame 0
 - [ ] Logged in the Generation Log with a rating
 
 ---

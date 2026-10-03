@@ -1,13 +1,21 @@
 {
   "name": "soundsmith",
   "description": "Suno v6 prompt engineering: style boxes, exclude fields, structure tags, model choice, and instrumental scores cut to picture. Separates what Suno documents from what the app merely shows.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": {
     "name": "JahooClou"
   },
   "homepage": "https://github.com/JahooClou/soundsmith",
   "repository": "https://github.com/JahooClou/soundsmith",
   "license": "MIT",
-  "keywords": ["suno", "music", "ai-music", "prompt-engineering", "scoring", "video", "skills"],
+  "keywords": [
+    "suno",
+    "music",
+    "ai-music",
+    "prompt-engineering",
+    "scoring",
+    "video",
+    "skills"
+  ],
   "skills": "./skills"
 }
